@@ -23,8 +23,8 @@
             //Load View
             var myView = sap.ui.xmlview({ viewName: "yoppieApp.view.Profile" });
             //id Page
-            var idMainPage = myView.getContent(); //[0].getId();
-            console.log(idMainPage);
+            console.log(myView);
+            var idMainPage = myView.getId("profilePage");
             
             // Create the application content
             var oApp = new sap.m.App("myApp", {
