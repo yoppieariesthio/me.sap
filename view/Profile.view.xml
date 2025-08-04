@@ -6,7 +6,7 @@
     xmlns:uxap="sap.uxap"
     displayBlock="true">
 
-<Page showHeader="false" id="profilePage">
+<Page showHeader="true" id="profilePage" title="Testt">
                 <content>
 
                     
