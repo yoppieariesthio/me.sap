@@ -1,7 +1,264 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPUI5 Static Page</title>
+    
+    <!-- SAPUI5 Bootstrap -->
+    <script id="sap-ui-bootstrap"
+        src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-libs="sap.m,sap.ui.core,sap.f"
+        data-sap-ui-resourceroots='{
+            "demo": "./"
+        }'
+        data-sap-ui-compatVersion="edge"
+        data-sap-ui-async="true">
+    </script>
+
+    <script>
+        sap.ui.getCore().attachInit(function() {
+            // Create the application content
+            var oApp = new sap.m.App("myApp", {
+                initialPage: "page1"
+            });
+
+            // Create the main page
+            var oPage = new sap.m.Page("page1", {
+                title: "SAPUI5 Demo Application",
+                showNavButton: false,
+                content: [
+                    // Header Panel
+                    new sap.m.Panel({
+                        headerText: "Welcome to SAPUI5",
+                        class: "sapUiResponsiveMargin",
+                        content: [
+                            new sap.m.Text({
+                                text: "This is a static HTML page built with SAPUI5 framework, showcasing various UI controls and modern design patterns."
+                            }).addStyleClass("sapUiMediumMargin")
+                        ]
+                    }),
+
+                    // Form Panel
+                    new sap.m.Panel({
+                        headerText: "User Information Form",
+                        class: "sapUiResponsiveMargin",
+                        content: [
+                            new sap.ui.layout.form.SimpleForm({
+                                editable: true,
+                                layout: "ResponsiveGridLayout",
+                                content: [
+                                    new sap.m.Label({ text: "First Name:" }),
+                                    new sap.m.Input({
+                                        id: "firstNameInput",
+                                        placeholder: "Enter your first name",
+                                        value: "John"
+                                    }),
+                                    
+                                    new sap.m.Label({ text: "Last Name:" }),
+                                    new sap.m.Input({
+                                        id: "lastNameInput",
+                                        placeholder: "Enter your last name",
+                                        value: "Doe"
+                                    }),
+                                    
+                                    new sap.m.Label({ text: "Email:" }),
+                                    new sap.m.Input({
+                                        id: "emailInput",
+                                        type: sap.m.InputType.Email,
+                                        placeholder: "Enter your email",
+                                        value: "john.doe@example.com"
+                                    }),
+                                    
+                                    new sap.m.Label({ text: "Department:" }),
+                                    new sap.m.ComboBox({
+                                        id: "departmentCombo",
+                                        items: [
+                                            new sap.ui.core.Item({ key: "IT", text: "Information Technology" }),
+                                            new sap.ui.core.Item({ key: "HR", text: "Human Resources" }),
+                                            new sap.ui.core.Item({ key: "FIN", text: "Finance" }),
+                                            new sap.ui.core.Item({ key: "MKT", text: "Marketing" })
+                                        ],
+                                        selectedKey: "IT"
+                                    }),
+                                    
+                                    new sap.m.Label({ text: "Active:" }),
+                                    new sap.m.Switch({
+                                        id: "activeSwitch",
+                                        state: true
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+
+                    // Action Buttons Panel
+                    new sap.m.Panel({
+                        headerText: "Actions",
+                        class: "sapUiResponsiveMargin",
+                        content: [
+                            new sap.m.HBox({
+                                class: "sapUiMediumMargin",
+                                items: [
+                                    new sap.m.Button({
+                                        text: "Save",
+                                        type: sap.m.ButtonType.Emphasized,
+                                        icon: "sap-icon://save",
+                                        press: function() {
+                                            var firstName = sap.ui.getCore().byId("firstNameInput").getValue();
+                                            var lastName = sap.ui.getCore().byId("lastNameInput").getValue();
+                                            var email = sap.ui.getCore().byId("emailInput").getValue();
+                                            var department = sap.ui.getCore().byId("departmentCombo").getSelectedItem().getText();
+                                            var isActive = sap.ui.getCore().byId("activeSwitch").getState();
+                                            
+                                            sap.m.MessageToast.show("Data saved successfully!\n" + 
+                                                "Name: " + firstName + " " + lastName + "\n" +
+                                                "Email: " + email + "\n" +
+                                                "Department: " + department + "\n" +
+                                                "Active: " + (isActive ? "Yes" : "No"));
+                                        }
+                                    }).addStyleClass("sapUiTinyMarginEnd"),
+                                    
+                                    new sap.m.Button({
+                                        text: "Reset",
+                                        type: sap.m.ButtonType.Default,
+                                        icon: "sap-icon://refresh",
+                                        press: function() {
+                                            sap.ui.getCore().byId("firstNameInput").setValue("John");
+                                            sap.ui.getCore().byId("lastNameInput").setValue("Doe");
+                                            sap.ui.getCore().byId("emailInput").setValue("john.doe@example.com");
+                                            sap.ui.getCore().byId("departmentCombo").setSelectedKey("IT");
+                                            sap.ui.getCore().byId("activeSwitch").setState(true);
+                                            sap.m.MessageToast.show("Form reset to default values");
+                                        }
+                                    }).addStyleClass("sapUiTinyMarginEnd"),
+                                    
+                                    new sap.m.Button({
+                                        text: "Info",
+                                        type: sap.m.ButtonType.Default,
+                                        icon: "sap-icon://information",
+                                        press: function() {
+                                            sap.m.MessageBox.information(
+                                                "This is a demonstration of SAPUI5 framework capabilities including:\n\n" +
+                                                "• Responsive design with SAP Horizon theme\n" +
+                                                "• Form controls (Input, ComboBox, Switch)\n" +
+                                                "• Interactive buttons with event handling\n" +
+                                                "• Message handling (Toast and MessageBox)\n" +
+                                                "• Modern UI patterns and layouts",
+                                                {
+                                                    title: "About This Demo"
+                                                }
+                                            );
+                                        }
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+
+                    // Data Table Panel
+                    new sap.m.Panel({
+                        headerText: "Sample Data Table",
+                        class: "sapUiResponsiveMargin",
+                        content: [
+                            new sap.m.Table({
+                                class: "sapUiMediumMargin",
+                                columns: [
+                                    new sap.m.Column({
+                                        header: new sap.m.Text({ text: "ID" })
+                                    }),
+                                    new sap.m.Column({
+                                        header: new sap.m.Text({ text: "Name" })
+                                    }),
+                                    new sap.m.Column({
+                                        header: new sap.m.Text({ text: "Department" })
+                                    }),
+                                    new sap.m.Column({
+                                        header: new sap.m.Text({ text: "Status" })
+                                    })
+                                ],
+                                items: [
+                                    new sap.m.ColumnListItem({
+                                        cells: [
+                                            new sap.m.Text({ text: "001" }),
+                                            new sap.m.Text({ text: "Alice Johnson" }),
+                                            new sap.m.Text({ text: "Engineering" }),
+                                            new sap.m.ObjectStatus({ 
+                                                text: "Active", 
+                                                state: sap.ui.core.ValueState.Success 
+                                            })
+                                        ]
+                                    }),
+                                    new sap.m.ColumnListItem({
+                                        cells: [
+                                            new sap.m.Text({ text: "002" }),
+                                            new sap.m.Text({ text: "Bob Smith" }),
+                                            new sap.m.Text({ text: "Marketing" }),
+                                            new sap.m.ObjectStatus({ 
+                                                text: "Active", 
+                                                state: sap.ui.core.ValueState.Success 
+                                            })
+                                        ]
+                                    }),
+                                    new sap.m.ColumnListItem({
+                                        cells: [
+                                            new sap.m.Text({ text: "003" }),
+                                            new sap.m.Text({ text: "Carol Davis" }),
+                                            new sap.m.Text({ text: "Finance" }),
+                                            new sap.m.ObjectStatus({ 
+                                                text: "Inactive", 
+                                                state: sap.ui.core.ValueState.Error 
+                                            })
+                                        ]
+                                    }),
+                                    new sap.m.ColumnListItem({
+                                        cells: [
+                                            new sap.m.Text({ text: "004" }),
+                                            new sap.m.Text({ text: "David Wilson" }),
+                                            new sap.m.Text({ text: "HR" }),
+                                            new sap.m.ObjectStatus({ 
+                                                text: "Pending", 
+                                                state: sap.ui.core.ValueState.Warning 
+                                            })
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            });
+
+            // Add the page to the app
+            oApp.addPage(oPage);
+
+            // Place the app in the HTML
+            oApp.placeAt("content");
+        });
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "72", "72full", Arial, Helvetica, sans-serif;
+        }
+        
+        #content {
+            height: 100vh;
+        }
+        
+        .sapUiMediumMargin {
+            margin: 1rem !important;
+        }
+        
+        .sapUiTinyMarginEnd {
+            margin-right: 0.5rem !important;
+        }
+    </style>
+</head>
+<body class="sapUiBody">
+    <div id="content"></div>
 </body>
 </html>
