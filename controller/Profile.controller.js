@@ -11,7 +11,7 @@ sap.ui.define([
         //     // Initialize controller
         //     this._oRouter = this.getOwnerComponent().getRouter();
         //     this._oModel = this.getOwnerComponent().getModel("profile");
-        },
+        }
 
      });
 });
