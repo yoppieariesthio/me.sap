@@ -8,9 +8,6 @@ sap.ui.define([
     return Controller.extend("yoppieApp.controller.Profile", {
         onInit: function () {
             alert("Profile controller initialized");
-        //     // Initialize controller
-        //     this._oRouter = this.getOwnerComponent().getRouter();
-        //     this._oModel = this.getOwnerComponent().getModel("profile");
         }
 
      });
