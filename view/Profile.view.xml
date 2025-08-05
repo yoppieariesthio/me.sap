@@ -39,15 +39,15 @@
                 </snappedHeading>
 
                 <expandedContent>
-                    <m:Text text="Senior UI Developer" />
+                    <m:Text text="Senior Developer" />
                 </expandedContent>
 
                 <snappedContent>
-                    <m:Text text="Senior UI Developer" />
+                    <m:Text text="Senior Developer" />
                 </snappedContent>
 
                 <snappedTitleOnMobile>
-                    <m:Title text="Senior UI Developer" />
+                    <m:Title text="Senior Developer" />
                 </snappedTitleOnMobile>
 
                 <actions>
@@ -68,10 +68,10 @@
         <headerContent>
             <m:FlexBox wrap="Wrap">
                 <m:Avatar class="sapUiSmallMarginEnd"
-                    src="./test-resources/sap/uxap/images/imageID_275314.png" displaySize="L" />
+                    src="{i18n>imageURL}" displaySize="L" />
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Link text="+33 6 4512 5158" />
+                    <m:Link text="+123456789" />
                     <m:Link text="yoppie.aries@outlook.com" />
                 </layout:VerticalLayout>
 
@@ -85,12 +85,12 @@
                     <m:Label text="Hello! I am Yoppie" />
                     <m:VBox>
                         <m:Label text="Achieved goals" />
-                        <m:ProgressIndicator percentValue="30" displayValue="30%" />
+                        <m:ProgressIndicator percentValue="80" displayValue="80%" />
                     </m:VBox>
                 </layout:VerticalLayout>
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Label text="San Jose, USA" />
+                    <m:Label text="Indonesia" />
                 </layout:VerticalLayout>
             </m:FlexBox>
         </headerContent>
