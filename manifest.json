@@ -52,37 +52,7 @@
                     "uri": "css/style.css"
                 }
             ]
-        },
-        "routing": {
-            "config": {
-                "routerClass": "sap.m.routing.Router",
-                "viewType": "XML",
-                "async": true,
-                "viewPath": "yoppieApp.view",
-                "controlAggregation": "pages",
-                "controlId": "app",
-                "clearControlAggregation": false
-            },
-            "routes": [
-                {
-                    "name": "RouteProfile",
-                    "pattern": ":?query:",
-                    "target": [
-                        "TargetProfile"
-                    ]
-                }
-            ],
-            "targets": {
-                "TargetProfile": {
-                    "viewType": "XML",
-                    "transition": "slide",
-                    "clearControlAggregation": false,
-                    "viewId": "Profile",
-                    "viewName": "Profile"
-                }
-            }
-        }
-    },
+        },       
     "sap.platform.hcp": {
         "uri": "webapp",
         "_version": "1.1.0"
@@ -91,4 +61,5 @@
         "ui5VersionDependency": "1.120.0"
     }
 }
+
 
