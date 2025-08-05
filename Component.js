@@ -5,7 +5,7 @@ sap.ui.define([
    "use strict";
    return UIComponent.extend("yoppieApp.Component", {
             metadata : {
-            manifest: "json"
+               manifest: "json"
       },
       init : function () {
          // call the init function of the parent
