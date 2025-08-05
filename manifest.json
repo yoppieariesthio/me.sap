@@ -42,7 +42,7 @@
                 "dataSource": "i18n",
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "yoppieApp.i18n"
+                    "bundleName": "yoppieApp.i18n.i18n"
                 }
             }
         },
