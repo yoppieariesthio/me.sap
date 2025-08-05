@@ -52,7 +52,8 @@
                     "uri": "css/style.css"
                 }
             ]
-        },       
+        }
+    },       
     "sap.platform.hcp": {
         "uri": "webapp",
         "_version": "1.1.0"
