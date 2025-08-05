@@ -31,8 +31,8 @@
                     <m:FlexBox fitContainer="true" alignItems="Center">
                         <!-- <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png"
                             class="sapUiTinyMarginEnd" /> -->
-                        <m:Avatar src="{i18n>imageURL}" alt=""
-                            displaySize="S" class="sapUiTinyMarginEnd" />
+                        <m:Avatar src="{i18n>imageURL}"
+                            displaySize="M" class="sapUiTinyMarginEnd" />
                         
                         <m:Title text="{i18n>profileTitle}" wrapping="true" />
                     </m:FlexBox>
