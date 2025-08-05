@@ -22,10 +22,10 @@ sap.ui.define([
         //  this.setModel(oModel);
 
          // set i18n model
-         var i18nModel = new ResourceModel({
-            bundleName : "yoppieApp.i18n.i18n"
-         });
-         this.setModel(i18nModel, "i18n");
+         // var i18nModel = new ResourceModel({
+         //    bundleName : "yoppieApp.i18n.i18n"
+         // });
+         // this.setModel(i18nModel, "i18n");
       }
    });
 });
