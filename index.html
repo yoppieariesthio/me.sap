@@ -21,7 +21,10 @@
 
     <script>
         sap.ui.getCore().attachInit(function() {
-            sap.ui.xmlview({ viewName: "yoppieApp.view.Profile" }).placeAt("content");
+            //sap.ui.xmlview({ viewName: "yoppieApp.view.Profile" }).placeAt("content");
+            new sap.ui.core.ComponentContainer({
+               name : "yoppieApp"
+            }).placeAt("content");
         });
     </script>
 
