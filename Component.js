@@ -6,7 +6,7 @@ sap.ui.define([
    "use strict";
    return UIComponent.extend("yoppieApp.Component", {
             metadata : {
-		rootView: "yoppieApp.view.Profile"
+		    rootView: "yoppieApp.view.Profile"
 	},
       init : function () {
          // call the init function of the parent
