@@ -27,6 +27,7 @@
         }
     },
     "sap.ui5": {
+        "rootView": "yoppieApp.view.Profile",
         "flexEnabled": true,
         "dependencies": {
             "minUI5Version": "1.120.0",
@@ -90,3 +91,4 @@
         "ui5VersionDependency": "1.120.0"
     }
 }
+
