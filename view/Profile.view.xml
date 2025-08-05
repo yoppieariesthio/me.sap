@@ -22,7 +22,7 @@
 
                 <expandedHeading>
                     <m:HBox>
-                        <m:Title text="Denise Smith" wrapping="true" />
+                        <m:Title text="{i18n>profileTitle}" wrapping="true" />
                         <m:ObjectMarker type="Favorite" class="sapUiTinyMarginBegin" />
                     </m:HBox>
                 </expandedHeading>
@@ -72,7 +72,7 @@
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
                     <m:Link text="+33 6 4512 5158" />
-                    <m:Link text="DeniseSmith@sap.com" />
+                    <m:Link text="yoppie.aries@outlook.com" />
                 </layout:VerticalLayout>
 
                 <layout:HorizontalLayout class="sapUiSmallMarginBeginEnd">
@@ -82,7 +82,7 @@
                 </layout:HorizontalLayout>
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Label text="Hello! I am Denise and I use UxAP" />
+                    <m:Label text="Hello! I am Yoppie" />
                     <m:VBox>
                         <m:Label text="Achieved goals" />
                         <m:ProgressIndicator percentValue="30" displayValue="30%" />
