@@ -109,10 +109,7 @@
 
                             <HBox class="sapUiTinyMarginBottom">
                                 <NumericContent
-                                    value="{
-                                            path: 'profile>/employee/startDate',
-                                            formatter: '.calculateTenure'
-                                        }"
+                                    value=""
                                     size="S"
                                     class="sapUiTinyMarginEnd" />
                                 <VBox>
@@ -165,10 +162,7 @@
 
                                                         <Label text="Start Date" />
                                                         <Text
-                                                            text="{
-                                                                    path: 'profile>/employee/startDate',
-                                                                    formatter: '.formatDate'
-                                                                }" />
+                                                            text="" />
 
                                                         <Label text="Status" />
                                                         <ObjectStatus
