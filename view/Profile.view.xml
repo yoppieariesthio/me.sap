@@ -2,210 +2,190 @@
     controllerName="yoppieApp.controller.Profile"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
-    xmlns="sap.m"
-    xmlns:uxap="sap.uxap"
-    displayBlock="true">
+    xmlns="sap.uxap"
+    xmlns:layout="sap.ui.layout"
+    xmlns:m="sap.m"
+    height="100%">
+    <ObjectPageLayout id="ObjectPageLayout"
+        showTitleInHeaderContent="true"
+        showEditHeaderButton="true"
+        editHeaderButtonPress="handleEditBtnPress"
+        headerContentPinned="true"
+        upperCaseAnchorBar="false">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
 
+                <!-- <breadcrumbs>
+                     <m:Breadcrumbs id="breadcrumbsId" currentLocationText="Object Page Example">
+                        <m:Link text="Page 1 a very long link" press="handleLink1Press" />
+                        <m:Link text="Page 2 long link" press="handleLink2Press" />
+                    </m:Breadcrumbs> 
+                </breadcrumbs> -->
 
-    <Page showHeader="false">
-        <content>
-            <uxap:ObjectPageLayout id="objectPageLayout">
+                <expandedHeading>
+                    <m:HBox>
+                        <m:Title text="{i18n>profileTitle}" wrapping="true" />
+                        <m:ObjectMarker type="Favorite" class="sapUiTinyMarginBegin" />
+                    </m:HBox>
+                </expandedHeading>
 
-                <!-- Object Page Header -->
-                <uxap:headerTitle>
-                    <uxap:ObjectPageDynamicHeaderTitle>
-                        <uxap:expandedHeading>
-                            <Title text="{profile>/employee/firstName} {profile>/employee/lastName}"
-                                level="H1"
-                                class="sapUiMediumMarginBottom" />
-                        </uxap:expandedHeading>
+                <snappedHeading>
+                    <m:FlexBox fitContainer="true" alignItems="Center">
+                        <!-- <m:Avatar src="./test-resources/sap/uxap/images/imageID_275314.png"
+                            class="sapUiTinyMarginEnd" /> -->
+                        <m:Avatar src="{i18n>imageURL}"
+                            displaySize="M" class="sapUiTinyMarginEnd" />
+                        
+                        <m:Title text="{i18n>profileTitle}" wrapping="true" />
+                    </m:FlexBox>
+                </snappedHeading>
 
-                        <uxap:snappedHeading>
-                            <FlexBox alignItems="Center">
-                                <Avatar src="{profile>/employee/profilePicture}"
-                                    displaySize="S"
-                                    class="sapUiTinyMarginEnd" />
-                                <Title
-                                    text="{profile>/employee/firstName} {profile>/employee/lastName}"
-                                    level="H2" />
-                            </FlexBox>
-                        </uxap:snappedHeading>
+                <expandedContent>
+                    <m:Text text="Senior Developer" />
+                </expandedContent>
 
-                        <uxap:expandedContent>
-                            <Text text="{profile>/employee/title}"
-                                class="sapUiMediumMarginBottom" />
-                            <Text
-                                text="{profile>/employee/department} • {profile>/employee/company}" />
-                        </uxap:expandedContent>
+                <snappedContent>
+                    <m:Text text="Senior Developer" />
+                </snappedContent>
 
-                        <uxap:snappedContent>
-                            <Text text="{profile>/employee/title}" />
-                        </uxap:snappedContent>
+                <snappedTitleOnMobile>
+                    <m:Title text="Senior Developer" />
+                </snappedTitleOnMobile>
 
-                        <uxap:actions>
-                            <Button text="Edit"
-                                type="Emphasized"
-                                press=".onEditPress" />
-                            <Button text="Share"
-                                press=".onSharePress" />
-                        </uxap:actions>
-                    </uxap:ObjectPageDynamicHeaderTitle>
-                </uxap:headerTitle>
+                <actions>
+                    <m:OverflowToolbarButton icon="sap-icon://edit" text="edit header"
+                        type="Emphasized" tooltip="edit">
+                        <m:layoutData>
+                            <m:OverflowToolbarLayoutData priority="NeverOverflow" />
+                        </m:layoutData>
+                    </m:OverflowToolbarButton>
+                    <m:OverflowToolbarButton icon="sap-icon://pull-down" text="show section"
+                        type="Emphasized" tooltip="pull-down" />
+                    <m:OverflowToolbarButton icon="sap-icon://show" text="show state" tooltip="show" />
+                    <m:Button text="Toggle Footer" press="toggleFooter" />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
 
-                <!-- Object Page Header Content -->
-                <uxap:headerContent>
-                    <FlexBox direction="Row"
-                        wrap="Wrap"
-                        class="sapUiMediumMargin">
+        <headerContent>
+            <m:FlexBox wrap="Wrap">
+                <m:Avatar class="sapUiSmallMarginEnd"
+                    src="{i18n>imageURL}" displaySize="L" />
 
-                        <!-- Profile Picture and Status -->
-                        <VBox class="sapUiLargeMarginEnd sapUiMediumMarginBottom">
-                            <Avatar src="{profile>/employee/profilePicture}"
-                                displaySize="XL"
-                                class="sapUiMediumMarginBottom" />
-                            <ObjectStatus text="{profile>/employee/status}"
-                                state="{profile>/employee/statusState}" />
-                        </VBox>
+               <m:VBox class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Contact Information" class="sapUiTinyMarginBottom" />
 
-                        <!-- Employee Information -->
-                        <VBox class="sapUiLargeMarginEnd sapUiMediumMarginBottom">
-                            <Label text="Employee ID" class="sapUiTinyMarginBottom" />
-                            <Text text="{profile>/employee/employeeId}"
-                                class="sapUiMediumMarginBottom" />
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon src="sap-icon://account"/>
+						<m:Link text="{i18n>profileTitle}" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
 
-                            <Label text="Manager" class="sapUiTinyMarginBottom" />
-                            <Text text="{profile>/employee/manager}" class="sapUiMediumMarginBottom" />
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon src="sap-icon://outgoing-call"/>
+						<m:Link text=" +60169300587" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
 
-                            <Label text="Experience" class="sapUiTinyMarginBottom" />
-                            <Text text="{profile>/employee/experience}" />
-                        </VBox>
+					<m:HBox>
+						<core:Icon src="sap-icon://email"/>
+						<m:Link text="yoppie.aries@outlook.com" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
+				</m:VBox>
 
-                        <!-- Contact Information -->
-                        <VBox class="sapUiLargeMarginEnd sapUiMediumMarginBottom">
-                            <Label text="Contact Information" class="sapUiTinyMarginBottom" />
-                            <List items="{profile>/employee/contactInfo}"
-                                showSeparators="None">
-                                <StandardListItem title="{profile>value}"
-                                    description="{profile>type}"
-                                    icon="{profile>icon}"
-                                    type="Active"
-                                    press=".onContactPress" />
-                            </List>
-                        </VBox>
+                <layout:HorizontalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Image src="./test-resources/sap/uxap/images/linkedin.png" />
+                    <m:Image src="./test-resources/sap/uxap/images/Twitter.png"
+                        class="sapUiSmallMarginBegin" />
+                </layout:HorizontalLayout>
 
-                        <!-- Statistics -->
-                        <VBox class="sapUiMediumMarginBottom">
-                            <Label text="Statistics" class="sapUiTinyMarginBottom" />
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Hello! I am Yoppie" />
+                    <m:VBox>
+                        <m:Label text="Achieved goals" />
+                        <m:ProgressIndicator percentValue="80" displayValue="80%" />
+                    </m:VBox>
+                </layout:VerticalLayout>
 
-                            <HBox class="sapUiTinyMarginBottom">
-                                <NumericContent value="{profile>/employee/projects}"
-                                    indicator="Up"
-                                    size="S"
-                                    class="sapUiTinyMarginEnd" />
-                                <VBox>
-                                    <Text text="Active Projects" class="sapUiTinyText" />
-                                </VBox>
-                            </HBox>
+                <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                    <m:Label text="Indonesia" />
+                </layout:VerticalLayout>
+            </m:FlexBox>
+        </headerContent>
 
-                            <HBox class="sapUiTinyMarginBottom">
-                                <NumericContent
-                                    value=""
-                                    size="S"
-                                    class="sapUiTinyMarginEnd" />
-                                <VBox>
-                                    <Text text="Tenure" class="sapUiTinyText" />
-                                </VBox>
-                            </HBox>
-                        </VBox>
-                    </FlexBox>
-                </uxap:headerContent>
+        <sections>
+            <ObjectPageSection titleUppercase="false" id="goalsSection" title="2014 Goals Plan">
+                <heading>
+                    <m:MessageStrip
+                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                        type="Error" />
+                </heading>
+                <subSections>
+                    <ObjectPageSubSection id="goalsSectionSS1">
+                        
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
 
-                <!-- Object Page Sections -->
-                <uxap:sections>
-
-                    <!-- Employment Details Section -->
-                    <uxap:ObjectPageSection title="Employment Details"
+            <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal"
+                importance="Medium">
+                <heading>
+                    <m:MessageStrip
+                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                        type="Error" />
+                </heading>
+                <subSections>
+                    <ObjectPageSubSection id="personalSectionSS1" title="Connect"
                         titleUppercase="false">
-                        <uxap:subSections>
-                            <uxap:ObjectPageSubSection>
-                                <uxap:blocks>
-                                    <VBox class="sapUiMediumMargin">
-                                        <Panel headerText="Employment Information"
-                                            class="sapUiResponsiveMargin"
-                                            width="auto">
-                                            <content>
-                                                <form:SimpleForm editable="false"
-                                                    layout="ResponsiveGridLayout"
-                                                    labelSpanXL="3"
-                                                    labelSpanL="3"
-                                                    labelSpanM="3"
-                                                    labelSpanS="12"
-                                                    adjustLabelSpan="false"
-                                                    emptySpanXL="4"
-                                                    emptySpanL="4"
-                                                    emptySpanM="4"
-                                                    emptySpanS="0"
-                                                    columnsXL="1"
-                                                    columnsL="1"
-                                                    columnsM="1"
-                                                    singleContainerFullSize="false"
-                                                    xmlns:form="sap.ui.layout.form">
-                                                    <form:content>
-                                                        <Label text="Department" />
-                                                        <Text text="{profile>/employee/department}" />
+                        <blocks>
+                            
+                        </blocks>
+                    </ObjectPageSubSection>
 
-                                                        <Label text="Title" />
-                                                        <Text text="{profile>/employee/title}" />
-
-                                                        <Label text="Manager" />
-                                                        <Text text="{profile>/employee/manager}" />
-
-                                                        <Label text="Start Date" />
-                                                        <Text
-                                                            text="" />
-
-                                                        <Label text="Status" />
-                                                        <ObjectStatus
-                                                            text="{profile>/employee/status}"
-                                                            state="{profile>/employee/statusState}" />
-                                                    </form:content>
-                                                </form:SimpleForm>
-                                            </content>
-                                        </Panel>
-                                    </VBox>
-                                </uxap:blocks>
-                            </uxap:ObjectPageSubSection>
-                        </uxap:subSections>
-                    </uxap:ObjectPageSection>
-
-                    <!-- Skills Section -->
-                    <uxap:ObjectPageSection title="Skills &amp; Expertise"
+                    <ObjectPageSubSection id="personalSectionSS2" title="Payment information"
                         titleUppercase="false">
-                        <uxap:subSections>
-                            <uxap:ObjectPageSubSection>
-                                <uxap:blocks>
-                                    <VBox class="sapUiMediumMargin">
-                                        <Panel headerText="Technical Skills"
-                                            class="sapUiResponsiveMargin"
-                                            width="auto">
-                                            <content>
-                                                <List items="{profile>/employee/skills}"
-                                                    mode="None">
-                                                    <StandardListItem title="{profile>name}"
-                                                        description="Level: {profile>level}"
-                                                        icon="sap-icon://learning-assistant" />
-                                                </List>
-                                            </content>
-                                        </Panel>
-                                    </VBox>
-                                </uxap:blocks>
-                            </uxap:ObjectPageSubSection>
-                        </uxap:subSections>
-                    </uxap:ObjectPageSection>
+                        <blocks>
+                           
+                        </blocks>
+                        <moreBlocks>
+                           
+                        </moreBlocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
 
-                </uxap:sections>
-            </uxap:ObjectPageLayout>
-        </content>
-    </Page>
+            <ObjectPageSection titleUppercase="false" id="employmentSection" title="Employment">
+                <subSections>
+                    <ObjectPageSubSection id="employmentSectionSS1" title="Job information"
+                        titleUppercase="false">
+                        <blocks>
+                           
+                        </blocks>
+                    </ObjectPageSubSection>
 
+                    <ObjectPageSubSection id="employmentSectionSS2" title="Employee Details"
+                        importance="Medium" titleUppercase="false">
+                        <blocks>
+                           
+                        </blocks>
+                        <moreBlocks>
+                           
+                        </moreBlocks>
+                    </ObjectPageSubSection>
+
+                    <ObjectPageSubSection id="employmentSectionSS3" title="Job Relationship"
+                        importance="Low" titleUppercase="false">
+                        <blocks>
+                         
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+        <footer>
+            <m:OverflowToolbar>
+                <m:ToolbarSpacer />
+                <m:Button type="Accept" text="Accept" />
+                <m:Button type="Reject" text="Reject" />
+            </m:OverflowToolbar>
+        </footer>
+    </ObjectPageLayout>
 </mvc:View>
