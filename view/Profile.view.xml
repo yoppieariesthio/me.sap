@@ -99,7 +99,7 @@
                     <m:Label text="Hello! I am Yoppie" />
                     <m:VBox>
                         <m:Label text="Achieved goals" />
-                        <m:ProgressIndicator percentValue="80" displayValue="80%" />
+                        <m:ProgressIndicator percentValue="100" displayValue="100%" />
                     </m:VBox>
                 </layout:VerticalLayout>
 
