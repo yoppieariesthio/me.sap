@@ -118,8 +118,7 @@
                 </subSections>
             </ObjectPageSection>
 
-            <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal"
-                importance="Medium">               
+            <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal">               
                 <subSections>
                     <ObjectPageSubSection id="personalSectionSS1" title="Connect"
                         titleUppercase="false">
@@ -128,8 +127,7 @@
                         </blocks>
                     </ObjectPageSubSection>
 
-                    <ObjectPageSubSection id="personalSectionSS2" title="Payment information"
-                        titleUppercase="false">
+                    <ObjectPageSubSection id="personalSectionSS2" title="Payment information" titleUppercase="false">
                         <blocks>
                            <m:Text text="{i18n>profileTitle}" wrapping="true" />
                         </blocks>
