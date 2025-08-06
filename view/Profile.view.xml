@@ -92,9 +92,7 @@
 				</m:VBox>
 
                 <layout:HorizontalLayout class="sapUiSmallMarginBeginEnd">
-                    <m:Image src="./test-resources/sap/uxap/images/linkedin.png" />
-                    <m:Image src="./test-resources/sap/uxap/images/Twitter.png"
-                        class="sapUiSmallMarginBegin" />
+                    <m:Image src="https://content.linkedin.com/content/dam/me/about/LinkedIn_Icon.jpg.original.jpg" />
                 </layout:HorizontalLayout>
 
                 <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
@@ -113,11 +111,6 @@
 
         <sections>
             <ObjectPageSection titleUppercase="false" id="goalsSection" title="2030 Goals Plan">
-               <!-- <heading>
-                     <m:MessageStrip
-                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                        type="Error" />
-                </heading> -->
                 <subSections>
                     <ObjectPageSubSection id="goalsSectionSS1">
                         <m:Text text="{i18n>profileTitle}" wrapping="true" />
@@ -126,12 +119,7 @@
             </ObjectPageSection>
 
             <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal"
-                importance="Medium">
-                <heading>
-                    <m:MessageStrip
-                        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                        type="Error" />
-                </heading>
+                importance="Medium">               
                 <subSections>
                     <ObjectPageSubSection id="personalSectionSS1" title="Connect"
                         titleUppercase="false">
@@ -159,26 +147,10 @@
                         <blocks>
                            <m:Text text="{i18n>profileTitle}" wrapping="true" />
                         </blocks>
-                    </ObjectPageSubSection>
-
-                    <ObjectPageSubSection id="employmentSectionSS2" title="Employee Details"
-                        importance="Medium" titleUppercase="false">
-                        <blocks>
-                           <m:Text text="{i18n>profileTitle}" wrapping="true" />
-                        </blocks>
-                        <moreBlocks>
-                           
-                        </moreBlocks>
-                    </ObjectPageSubSection>
-
-                    <ObjectPageSubSection id="employmentSectionSS3" title="Job Relationship"
-                        importance="Low" titleUppercase="false">
-                        <blocks>
-                            <m:Text text="{i18n>profileTitle}" wrapping="true" />
-                        </blocks>
-                    </ObjectPageSubSection>
+                    </ObjectPageSubSection>                    
                 </subSections> 
             </ObjectPageSection> 
+
         </sections>
         <footer>
             <m:OverflowToolbar>
