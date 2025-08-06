@@ -126,15 +126,6 @@
                             <m:Text text="{i18n>profileTitle}" wrapping="true" />
                         </blocks>
                     </ObjectPageSubSection>
-
-                    <ObjectPageSubSection id="personalSectionSS2" title="Payment information" titleUppercase="false">
-                        <blocks>
-                           <m:Text text="{i18n>profileTitle}" wrapping="true" />
-                        </blocks>
-                        <moreBlocks>
-                           
-                        </moreBlocks>
-                    </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
 
