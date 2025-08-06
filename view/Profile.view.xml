@@ -177,7 +177,7 @@
                             <m:Text text="{i18n>profileTitle}" wrapping="true" />
                         </blocks>
                     </ObjectPageSubSection>
-                </subSections>
+                </subSections> 
             </ObjectPageSection> 
         </sections>
         <footer>
