@@ -113,14 +113,14 @@
 
         <sections>
             <ObjectPageSection titleUppercase="false" id="goalsSection" title="2030 Goals Plan">
-                <heading>
+               <!-- <heading>
                      <m:MessageStrip
                         text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                         type="Error" />
-                </heading>
+                </heading> -->
                 <subSections>
                     <ObjectPageSubSection id="goalsSectionSS1">
-                        <m:Title text="{i18n>profileTitle}" wrapping="true" />
+                        <m:Text text="{i18n>profileTitle}" wrapping="true" />
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
