@@ -43,8 +43,7 @@
                 "settings": {
                     "bundleName": "yoppieApp.i18n.i18n"
                 }
-            },
-            ""
+            }
         },
         "resources": {
             "css": [
