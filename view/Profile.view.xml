@@ -9,9 +9,10 @@
     <ObjectPageLayout id="ObjectPageLayout"
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
-        editHeaderButtonPress="handleEditBtnPress"
         headerContentPinned="true"
-        upperCaseAnchorBar="false">
+        upperCaseAnchorBar="false"
+        preserveHeaderStateOnScroll="true"
+        >
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
 
@@ -41,15 +42,15 @@
                 </snappedHeading>
 
                 <expandedContent>
-                    <m:Text text="Senior Developer" />
+                    <m:Text text="ABAP Developer" />
                 </expandedContent>
 
                 <snappedContent>
-                    <m:Text text="Senior Developer" />
+                    <m:Text text="ABAP Developer" />
                 </snappedContent>
 
                 <snappedTitleOnMobile>
-                    <m:Title text="Senior Developer" />
+                    <m:Title text="ABAP Developer" />
                 </snappedTitleOnMobile>
 
                 <actions>
