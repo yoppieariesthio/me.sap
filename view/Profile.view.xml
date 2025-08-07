@@ -5,7 +5,7 @@
     xmlns="sap.uxap"
     xmlns:layout="sap.ui.layout"
     xmlns:m="sap.m"
-    height="100%">
+    >
     <ObjectPageLayout
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
