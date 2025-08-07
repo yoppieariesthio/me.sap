@@ -5,7 +5,9 @@
     xmlns="sap.uxap"
     xmlns:layout="sap.ui.layout"
     xmlns:m="sap.m"
+    height="100%"
     >
+    <m:App>
     <ObjectPageLayout
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
@@ -150,4 +152,5 @@
             </m:OverflowToolbar>
         </footer>
     </ObjectPageLayout>
+    </m:App>
 </mvc:View>
