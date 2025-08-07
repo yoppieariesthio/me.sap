@@ -6,7 +6,7 @@
     xmlns:layout="sap.ui.layout"
     xmlns:m="sap.m"
     height="100%">
-    <ObjectPageLayout id="ObjectPageLayout"
+    <ObjectPageLayout
         showTitleInHeaderContent="true"
         showEditHeaderButton="true"
         headerContentPinned="true"
@@ -63,7 +63,7 @@
                     <m:OverflowToolbarButton icon="sap-icon://pull-down" text="show section"
                         type="Emphasized" tooltip="pull-down" />
                     <m:OverflowToolbarButton icon="sap-icon://show" text="show state" tooltip="show" />
-                    <m:Button text="Toggle Footer" press="toggleFooter" />
+                    <m:Button text="Toggle Footer" />
                 </actions>
             </ObjectPageDynamicHeaderTitle>
         </headerTitle>
@@ -111,17 +111,17 @@
         </headerContent>
 
         <sections>
-            <ObjectPageSection titleUppercase="false" id="goalsSection" title="2030 Goals Plan">
+            <ObjectPageSection titleUppercase="false"  title="2030 Goals Plan">
                 <subSections>
-                    <ObjectPageSubSection id="goalsSectionSS1">
+                    <ObjectPageSubSection >
                         <m:Text text="{i18n>profileTitle}" wrapping="true" />
                     </ObjectPageSubSection>
                 </subSections>
             </ObjectPageSection>
 
-            <ObjectPageSection titleUppercase="false" id="personalSection" title="Personal">               
+            <ObjectPageSection titleUppercase="false"  title="Personal">               
                 <subSections>
-                    <ObjectPageSubSection id="personalSectionSS1" title="Connect"
+                    <ObjectPageSubSection title="Connect"
                         titleUppercase="false">
                         <blocks>
                             <m:Text text="{i18n>profileTitle}" wrapping="true" />
@@ -130,9 +130,9 @@
                 </subSections>
             </ObjectPageSection>
 
-            <ObjectPageSection titleUppercase="false" id="employmentSection" title="Employment">
+            <ObjectPageSection titleUppercase="false" title="Employment">
                 <subSections>
-                    <ObjectPageSubSection id="employmentSectionSS1" title="Job information"
+                    <ObjectPageSubSection title="Job information"
                         titleUppercase="false">
                         <blocks>
                            <m:Text text="{i18n>profileTitle}" wrapping="true" />
