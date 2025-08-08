@@ -1,0 +1,45 @@
+{
+  "job_experiences": [
+    {
+      "job_title": "SAP ABAP Developer",
+      "company_name": "Global ERP Solutions",
+      "location": "Selangor, Malaysia",
+      "start_date": "2023-01",
+      "end_date": "2025-06",
+      "employment_type": "Full-time",
+      "technologies": ["SAP ABAP", "ALV Reports", "SmartForms", "BAPIs", "RFC", "IDocs", "SAP Fiori"],
+      "responsibilities": [
+        "Developed and maintained custom ABAP programs including reports, module pool programming, and enhancements.",
+        "Created and modified SmartForms and SAP Scripts for business document automation.",
+        "Integrated SAP modules using BAPIs, RFCs, and IDocs for seamless data exchange.",
+        "Worked closely with functional consultants to gather requirements and deliver technical solutions.",
+        "Performed performance tuning and debugging of ABAP code to optimize system efficiency."
+      ],
+      "achievements": [
+        "Successfully led the technical development for a major SAP rollout across Southeast Asia.",
+        "Reduced report generation time by 50% through optimized ALV reporting techniques.",
+        "Recognized for delivering high-quality code with zero post-deployment defects."
+      ]
+    },
+    {
+      "job_title": "Junior SAP ABAP Developer",
+      "company_name": "ERP Tech Services",
+      "location": "Kuala Lumpur, Malaysia",
+      "start_date": "2020-07",
+      "end_date": "2022-12",
+      "employment_type": "Full-time",
+      "technologies": ["SAP ABAP", "User Exits", "Enhancement Framework", "Data Dictionary", "SAP MM", "SAP SD"],
+      "responsibilities": [
+        "Assisted in developing custom reports and enhancements using ABAP.",
+        "Implemented user exits and BADIs to meet specific business requirements.",
+        "Maintained and extended SAP standard objects using the Enhancement Framework.",
+        "Supported SAP MM and SD modules with technical customizations and issue resolutions.",
+        "Documented technical specifications and participated in unit testing."
+      ],
+      "achievements": [
+        "Automated manual processes in SAP MM, saving 20+ hours per month for the procurement team.",
+        "Completed SAP ABAP certification and contributed to internal knowledge-sharing sessions."
+      ]
+    }
+  ]
+}
