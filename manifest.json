@@ -8,7 +8,13 @@
             "version": "0.0.1"
         },
         "title": "{{appTitle}}",
-        "description": "{{appDescription}}"
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "localJsonData": {
+                "uri": "models/Profile.json",
+                "type": "JSON"
+            }
+        }
     },
     "sap.ui": {
         "technology": "UI5",
@@ -43,6 +49,10 @@
                 "settings": {
                     "bundleName": "yoppieApp.i18n.i18n"
                 }
+            },
+            "localProfileModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "localJsonData"
             }
         },
         "resources": {
@@ -52,7 +62,7 @@
                 }
             ]
         }
-    },       
+    },
     "sap.platform.hcp": {
         "uri": "webapp",
         "_version": "1.1.0"
@@ -61,5 +71,3 @@
         "ui5VersionDependency": "1.120.0"
     }
 }
-
-

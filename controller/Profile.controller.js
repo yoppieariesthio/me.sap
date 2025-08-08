@@ -8,7 +8,6 @@ sap.ui.define([
     return Controller.extend("yoppieApp.controller.Profile", {
         onInit: function () {
             alert("Profile controller initialized");
-            this.getView().setModel(new JSONModel("./models/Profile.json"), "ProfileModel");
         }
 
      });
