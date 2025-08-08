@@ -52,6 +52,7 @@
             },
             "localProfileModel": {
                 "type": "sap.ui.model.json.JSONModel",
+
                 "dataSource": "localJsonData"
             }
         },
