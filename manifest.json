@@ -12,7 +12,10 @@
         "dataSources": {
             "localJsonData": {
                 "uri": "models/Profile.json",
-                "type": "JSON"
+                "type": "JSON",
+                "settings": {
+                    "localUri": "models/Profile.json"
+                }
             }
         }
     },
@@ -52,7 +55,6 @@
             },
             "localProfileModel": {
                 "type": "sap.ui.model.json.JSONModel",
-
                 "dataSource": "localJsonData"
             }
         },
