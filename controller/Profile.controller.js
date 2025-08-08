@@ -9,7 +9,8 @@ sap.ui.define([
         onInit: function () {
             alert("Profile controller initialized");
             var myModel = this.getOwnerComponent().getModel("localProfileModel"); //this.getView().getModel("localProfileModel");
-            console.log(myModel);
+            console.log(myModel.getMetadata());
+            console.log(myModel.getData());
         }
 
      });
