@@ -72,8 +72,8 @@
 
         <headerContent>
             <m:FlexBox wrap="Wrap">
-                <m:Avatar class="sapUiSmallMarginEnd"
-                    src="{i18n>imageURL}" displaySize="L" />
+                <m:Avatar src="{i18n>imageURL}"
+                            displaySize="L" class="sapUiTinyMarginEnd" badgeValueState="Success" badgeIcon="sap-icon://verified"/>
 
                <m:VBox class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
 					<m:Title text="Contact Information" class="sapUiTinyMarginBottom" />
