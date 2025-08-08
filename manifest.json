@@ -11,7 +11,7 @@
         "description": "{{appDescription}}",
         "dataSources": {
             "localJsonData": {
-                "uri": "/.models/Profile.json",
+                "uri": "models/Profile.json",
                 "type": "JSON"
             }
         }
