@@ -11,9 +11,8 @@
         "description": "{{appDescription}}",
         "dataSources": {
             "localJsonData": {
-                "uri": "./model/localProfile.json",
-                "type": "JSON"
-                
+                "uri": "model/localProfile.json",
+                "type": "JSON"                
             }
         }
     },
@@ -73,5 +72,6 @@
     }
 
 }
+
 
 
