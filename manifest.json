@@ -73,4 +73,5 @@
     "sap.platform.cf": {
         "ui5VersionDependency": "1.120.0"
     }
+
 }
