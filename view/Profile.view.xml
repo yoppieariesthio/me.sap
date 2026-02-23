@@ -14,6 +14,7 @@
         headerContentPinned="true"
         upperCaseAnchorBar="false"
         preserveHeaderStateOnScroll="true"
+		sections="myData>/objPageData/0/objAllPages>"
         >
         <headerTitle>
             <ObjectPageDynamicHeaderTitle>
