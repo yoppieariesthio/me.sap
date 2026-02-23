@@ -7,7 +7,7 @@ sap.ui.define([
 
     return Controller.extend("yoppieApp.controller.Profile", {
         onInit: function () {
-            alert("Profile controller initialized");
+            //alert("Profile controller initialized");
             var myModel = this.getOwnerComponent().getModel("localProfileModel");
             console.log(myModel.getMetadata());
             console.log(myModel.getData());
