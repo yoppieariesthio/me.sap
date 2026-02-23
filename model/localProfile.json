@@ -1,1 +1,22 @@
-
+{
+  "projects": [
+    {
+      "title": "Aplikasi E-Commerce Sederhana",
+      "description": "Membangun platform belanja online dengan fitur keranjang dan integrasi pembayaran.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe API"],
+      "role": "Lead Developer",
+      "date_completed": "Mei 2025",
+      "url": "https://github.com/username/project-ecommerce",
+      "is_active": true
+    },
+    {
+      "title": "Sistem Manajemen Perpustakaan",
+      "description": "Aplikasi desktop untuk mendata peminjaman buku dan anggota perpustakaan secara otomatis.",
+      "technologies": ["Python", "SQLite", "Tkinter"],
+      "role": "Fullstack Developer",
+      "date_completed": "Desember 2024",
+      "url": "https://github.com/username/library-app",
+      "is_active": false
+    }
+  ]
+}
