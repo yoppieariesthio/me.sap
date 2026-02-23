@@ -11,6 +11,7 @@ sap.ui.define([
             var myModel = this.getOwnerComponent().getModel("localProfileModel");
             console.log(myModel.getMetadata());
             console.log(myModel.getData());
+            console.log(myModel.loadData());
         }
 
      });
